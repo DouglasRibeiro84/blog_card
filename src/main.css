@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('./fonts/Figtree-Italic-VariableFont_wght.ttf') format('woff2'),
+        url('./fonts/Figtree-VariableFont_wght.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree';
+    line-height: 150%;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(47, 88%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 384px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid hsl(0, 0%, 7%);
+    box-shadow: 8px 8px black;
+    cursor: pointer;
+    transition: box-shadow .3s ease-out
+}
+
+.card:hover {
+    box-shadow: 16px 16px black
+}
+
+.image_top {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.content {
+    padding-top: 24px;
+}
+
+.content_button {
+    background-color: hsl(47, 88%, 63%);
+    color: hsl(0, 0%, 7%);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+}
+
+
+.content_date {
+    margin: 12px 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(0, 0%, 7%);
+}
+
+.content_information {
+    padding-bottom: 24px;
+}
+
+.content_information--title {
+    font-weight: 800;
+    font-size: 24px;
+    color: hsl(0, 0%, 7%);
+    margin-bottom: 12px;
+    transition: color .5s ease
+}
+
+.card:hover .content_information--title {
+    color: hsl(47, 88%, 63%);
+}
+
+.content_information--text {
+    font-size: 16px;
+    color: hsl(0, 0%, 42%);
+
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+}
+
+.autor_image {
+    width: 32px;
+    margin-right: 12px;
+}
+
+.autor_text {
+    font-weight: 800;
+    font-size: 14px;
+    color: hsl(0, 0%, 7%);
+}
+
+@media (min-width: 375px ) and (max-width: 762px) {
+
+    .card{
+        max-width: 90%;
+    }
+
+    .content_information--title {
+        font-size: 20px;
+    }
+}
